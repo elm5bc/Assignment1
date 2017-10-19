@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin: .25px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: .25px;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  text-align: left;
+}
+
+/* Create a position for the map on the page */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Set rules for how the map overlays (info box and legend) will be displayed on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 0px;
+  font-family: Courier, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  top: 0;
+  height: 100vh;
+  margin-top: 0px;
+  width: 400px;
+  padding: 15px;
+}
+
+
+/* Modals */
+#screen {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.modal {
+  display: none;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 150px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    padding: 30px;
+    font-family: Courier;
+}
+
+.modal .close-button {
+  color: #4e6270;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  line-height: 30px;
+  font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.modal .close-button:hover { 
+  color: #bbb;
+}
+
+
+
+/* Pop-ups */
+
+.mapboxgl-popup-tip {
+  border-top-color: blue !important;  /* the triangular shape at the bottom of the popup (tooltip) is formed by a thick border, where only the top border has a color, and the left, right, and bottom borders are transparent. Read more at https://css-tricks.com/snippets/css/css-triangle/ */
+}
+
+.mapboxgl-popup-content { 
+  background-color: rgba(255, 255, 255, 0.9);
+    border: 1px rgba(78, 98, 112, 1);
+    box-shadow: 3px 3px 8px rgba(0, 56, 125, 0.4);    
+    font-family: Courier;
+    font-size: larger;
+    color: rgba(78, 98, 112, 1);
+}
+
+.mapboxgl-popup-close-button {
+    font-size: 30px;
+    color: rgba(78, 98, 112, 1);
+}
+
+/* About this Map Button */
+.button-default {
+    position: absolute;
+    margin: 20px;
+    background: #4e6270;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: larger;
+    font-family: Courier;
+    cursor: pointer;    
+}
+
+.button-default:hover {
+    background: darkblue;
+}
+
+.button-default:active {
+    background: black;
+}
+
+.popup-img {
+    height: 300px;
+    width: 300px;
+    background-size: cover !important;
+}
+
+.info-window-img {
+    height: 800px;
+    width: 400px;
+    background-size: cover !important;
+}
+
+.info-window-image {
+    height: 400px;
+    width: 400px;
+    background-size: cover !important;
+}

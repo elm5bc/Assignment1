@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>My Mapbox GL JS Map</title>
+
+	<!-- Link to JQuery library (used for modal) -->	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<!-- Link to Mapbox GL JS library -->	
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
+
+	<!-- Link to Mapbox GL JS css stylesheet -->	
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+
+	<!-- Link to our custom stylesheet -->	
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<!-- Map  -->	
+	<div id="map"></div>
+
+	<!-- Info window (shows info about parks when hovering over a park)  -->	
+	<div class='map-overlay' id='features'>
+		<h2>America's Highways and Cities</h2>
+		<div id='info-window-body'>
+			<p>In 1956 the Federal Aid Highway Act was approved, laying the legislative groundwork for an interstate transportation system which acutely changed the American city. The idea and main proponent of the interstate highway system was then President Dwight D. Eisenhower. During WWII Eisenhower saw Germany’s Autobahn as part of a successful defense strategy. The highway system was proposed primarily as a defense system for the U.S. A system which could transport troops quickly across the country, as well as evacuate citizens rapidly in the event of an emergency.  
+</p>
+			<p>
+			Under the act states could propose a highway, and if accepted the federal government would pay for 90 percent of the cost. Eisenhower never envisioned the highway system running through cities. Rather the highway was to connect cities state to state. However the oversite was left to the states and most proposals chose to run highways through the city rather than around. 
+</p>
+<p>
+			Zoom into a city to learn more.
+</p>
+			<p>
+			Source: Seattle Times
+</p>
+		</div>
+		<div id='info-window-image'>
+		</div>
+	</div>
+
+	<!-- "About this map" modal (hidden by default) -->	
+	<div class='modal'>
+		<h2 class='modal-title'>About this project</h2>
+		<div class='modal-body'><p>This map is starting to understand the relationship between the growth of the US Interstate System and the changes within the American City.</p><p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the <a href='https://catalog.data.gov/L//>America's Highways and Cities</a></p><p>For questions or to improve this map, contact <a href='mailto:elm5bc@virginia.edu'>Erica Mutschler</a></p></div>
+		<button class='close-button'>&times;</button>  	<!-- A special "x" character (the multiply sign) used in close buttons -->	
+	</div>
+	<div id='screen'></div>
+
+	<!-- Button to hide or show "About this map" modal -->	
+	<button type='button' class='button-default' id="about">About this map</button> <!-- Button to hide or show modal -->
+</body>
+
+<!-- Link to our custom javascript -->	
+<script src="map.js"></script>
+ </html>
